@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  <title>Frontend Mentor | Gamer sign-up form</title>
+
+</head>
+
+<body>
+
+  <main>
+
+    <section class="GameCompanyContent">
+
+      <div class="head">
+        <img src="./assets/images/logo.svg" alt="" class="logoImg">
+        <p class="MobileInputUpdate preset-6">[0]/5 ready</p>
+      </div>
+
+      <h1 class="title preset-1">
+        <span class="titleMark" aria-hidden="true">//</span>
+        Join the nexus
+      </h1>
+
+      <p class="titleDescription">
+        Initialize your NEONCORE identity
+      </p>
+
+      <div class="operatorTxtContainer">
+
+          <div class="operatorTopContent">
+            <div class="operatorStatus">
+              <p class="operatorTitle preset-6">Operator ID</p>
+              <p class="operatorUpdate preset-2">Unassigned</p>
+            </div>
+          <p class="desktopInputUpdate preset-6 ">[0]/5 ready</p>
+        </div>
+
+        <div class="statusContainer">
+          <div class="statusRow">
+            <span class="fieldName preset-6">Callsign</span>
+            <span class="separator" aria-hidden="true"></span>
+            <span class="fieldStatus preset-6">Pending</span>
+          </div>
+
+          <div class="statusRow">
+            <span class="fieldName preset-6">Email</span>
+            <span class="separator" aria-hidden="true"></span>
+            <span class="fieldStatus preset-6">Pending</span>
+          </div>
+
+          <div class="statusRow">
+            <span class="fieldName preset-6">Password</span>
+            <span class="separator" aria-hidden="true"></span>
+            <span class="fieldStatus preset-6">Pending</span>
+          </div>
+
+          <div class="statusRow">
+            <span class="fieldName preset-6">Confirm</span>
+            <span class="separator" aria-hidden="true"></span>
+            <span class="fieldStatus preset-6">Pending</span>
+          </div>
+
+          <div class="statusRow">
+            <span class="fieldName preset-6">Terms</span>
+            <span class="separator" aria-hidden="true"></span>
+            <span class="fieldStatus preset-6">Required</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="assignmentUpdate">
+
+      <section class="formContent preset-6" aria-labelledby="formTitle">
+
+        <div class="formTitleContainer">
+          <h2 class="formTitle" id="formTitle">
+            New operator
+          </h2>
+
+          <p class="formTitleDesc preset-6">
+            All <span>fields</span> required
+          </p>
+        </div>
+
+        <form id="signupForm" novalidate>
+          
+          <div class="inputContent">
+
+            <div class="inputContainer">
+
+              <div class="topContent">
+                <span class="arrowIcon" aria-hidden="true">&gt;</span>
+                <label class="inputName preset-6" for="callsign">Callsign</label>
+              </div>
+
+              <div class="inputWrapper">
+                <input type="text" id="callsign" name="callsign" placeholder="e.g. Vortex_07" autocomplete="username"
+                  minlength="3" maxlength="20" pattern="[A-Za-z0-9_\-]+" required
+                  aria-describedby="callsignHint callsignError" aria-invalid="false" class="preset-4">
+                <img src="./assets/images/icon-tick-20.svg" alt="" class="inputStatusIcon" hidden>
+              </div>
+              <div class="attentionContainer">
+                <div class="requirements preset-7">
+                  <p id="callsignHint">
+                    3–20 characters: letters, numbers, _ or -
+                  </p>
+                </div>
+
+                <div class="warningContent" hidden>
+
+                  <img src="./assets/images/icon-alert.svg" alt="" class="alertIcon">
+
+                  <p class="fieldError" id="callsignError"></p>
+
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Email -->
+            <div class="inputContainer">
+
+              <div class="topContent">
+                <span class="arrowIcon" aria-hidden="true">&gt;</span>
+                <label class="inputName" for="email">Email</label>
+              </div>
+
+              <div class="inputWrapper">
+                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required
+                  aria-describedby="emailError" aria-invalid="false" class="preset-4">
+
+                <img src="./assets/images/icon-tick-20.svg" alt="" class="inputStatusIcon" hidden>
+              </div>
+
+              <div class="attentionContainer">
+                <div class="warningContent" hidden>
+
+                  <img src="./assets/images/icon-alert.svg" alt="" class="alertIcon">
+
+                  <p class="fieldError" id="emailError" hidden></p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Password -->
+            <div class="inputContainer">
+
+              <div class="topContent">
+                <span class="arrowIcon" aria-hidden="true">&gt;</span>
+                <label class="inputName" for="password">Password</label>
+              </div>
+
+              <div class="passwordInputContainer">
+                <input type="password" id="password" class="preset-4" name="password" autocomplete="new-password"
+                  minlength="8" required aria-describedby="passwordHint passwordStrength passwordError"
+                  aria-invalid="false">
+                <img src="./assets/images/icon-tick-20.svg" alt="" class="inputStatusIcon" hidden>
+                <button type="button" class="passwordToggle" aria-label="Show password" aria-controls="password"
+                  aria-pressed="false">
+                  <img src="./assets/images/icon-eye.svg" alt="" class="eyeIcon">
+                </button>
+              </div>
+
+              <div class="attentionContainer">
+
+                <div class="passwordStrength" id="passwordStrength">
+
+                  <div class="strengthMeter" role="meter" aria-label="Password strength" aria-valuemin="0"
+                    aria-valuemax="4" aria-valuenow="0" aria-valuetext="No password entered">
+                    <span class="strengthSegment" aria-hidden="true"></span>
+                    <span class="strengthSegment" aria-hidden="true"></span>
+                    <span class="strengthSegment" aria-hidden="true"></span>
+                    <span class="strengthSegment" aria-hidden="true"></span>
+                  </div>
+
+                </div>
+                <div class="requirements">
+                  <p id="passwordHint">At least 8 characters</p>
+                  <span id="strengthLabel" hidden>Weak</span>
+                </div>
+
+                <div class="warningContent" hidden>
+                  <img src="./assets/images/icon-alert.svg" alt="" class="alertIcon">
+                  <p class="fieldError" id="passwordError" hidden></p>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="inputContainer">
+
+              <div class="topContent">
+                <span class="arrowIcon" aria-hidden="true">&gt;</span>
+                <label class="inputName" for="confirmPassword">
+                  Confirm password
+                </label>
+              </div>
+
+              <div class="passwordInputContainer">
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password"
+                  autocomplete="new-password" required aria-describedby="confirmPasswordError" aria-invalid="false"
+                  class="preset-4">
+                <img src="./assets/images/icon-tick-20.svg" alt="" class="inputStatusIcon" hidden>
+                <button type="button" class="passwordToggle" aria-label="Show password" aria-controls="confirmPassword"
+                  aria-pressed="false">
+                  <img src="./assets/images/icon-eye.svg" alt="" class="eyeIcon">
+                </button>
+              </div>
+
+              <div class="attentionContainer">
+                <div class="warningContent" hidden>
+                  <img src="./assets/images/icon-alert.svg" alt="" class="alertIcon">
+                  <p class="fieldError" id="confirmPasswordError" hidden></p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Terms and Conditions -->
+          <div class="termsContainer">
+
+            <label class="termsLabel preset-5" for="terms">
+
+              <input type="checkbox" id="terms" name="terms" required aria-describedby="termsError">
+
+              <span>
+                I accept the
+                <span class="termsText">Terms</span>
+                and
+                <span class="termsText">Privacy Policy.</span>
+              </span>
+
+            </label>
+
+            <div class="warningContent" hidden>
+              <img src="./assets/images/icon-alert.svg" alt="" class="alertIcon">
+              <p class="fieldError" id="termsError"></p>
+            </div>
+
+          </div>
+
+          <!-- Dynamic form announcement -->
+          <p class="formFeedback" id="formFeedback" role="status" aria-live="polite" aria-atomic="true"></p>
+
+          <!-- Submit -->
+          <button type="submit" class="submitButton preset-5-bold">
+            Initialize account
+          </button>
+
+          <!-- Login -->
+          <p class="registrationQuestion preset-5">
+            Already an operator?
+            <span class="loginText">Log in</span>
+          </p>
+
+        </form>
+
+      </section>
+
+      <section class="successContent" aria-labelledby="successTitle" hidden>
+
+        <img src="./assets/images/icon-hex-check.svg" alt="" class="successIcon">
+
+        <h2 class="successTitle preset-2" id="successTitle" tabindex="-1">
+          <span class="titleMark" aria-hidden="true">//</span>
+          Handshake complete
+        </h2>
+
+        <p class="successDescription preset-4">
+          Operator
+          <span id="successCallsign">[callsign]</span>
+          provisioned. Your account is ready.
+        </p>
+
+        <span class="successLoginButton preset-5-bold">
+          Continue to log in
+        </span>
+
+      </section>
+
+    </section>
+
+  </main>
+
+  <aside class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/MR-M4N1" target="_blank">MR-M4N1</a>.
+  </aside>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
